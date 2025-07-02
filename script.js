@@ -15,16 +15,26 @@
 }
 
 */
+// grid gameboard turned into an object
+function Gameboard(){
+    return {
+        row1: [1, 2, 3],
+        row2: [4, 5, 6],
+        row3: [7, 8, 9],
+        printGameboard(){
+            for (let key in this) {
+                if (Array.isArray(this[key])) {
+                    console.log(this[key].join(' '));
+                }
+            }
+        }
+    };
 
-// this is the grid layout for tictactoe
-const gameboard = [[1,2,3],
-                   [4,5,6],
-                   [7,8,9]];
+}
 
-for(let row of gameboard){
-    const gameboardString = row.join(' ');
-    console.log(gameboardString);
-};
+const gameboard = Gameboard();
+gameboard.printGameboard();
+
 
 // player object
 function player(name, symbol) {
