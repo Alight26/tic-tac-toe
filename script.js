@@ -15,6 +15,8 @@
 }
 
 */
+
+// this is the grid layout for tictactoe
 const gameboard = [[1,2,3],
                    [4,5,6],
                    [7,8,9]];
@@ -22,4 +24,17 @@ const gameboard = [[1,2,3],
 for(let row of gameboard){
     const gameboardString = row.join(' ');
     console.log(gameboardString);
-}
+};
+
+// player object
+function player(name, symbol) {
+    return{
+        name,
+        symbol,
+    };
+};
+
+let player1 = player("player1", "X");
+let player2 = player("Player2", "O");
+
+
